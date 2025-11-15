@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>An abstract/virtual filesystem framework with many built-ins filesystems for .NET</Description>
     <Copyright>Alexandre Mutel</Copyright>
@@ -24,8 +24,8 @@
   <ItemGroup>
     <None Include="../../img/zio.png" Pack="true" PackagePath="" />
     <None Include="../../readme.md" Pack="true" PackagePath="/" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-    <PackageReference Include="MinVer" Version="4.3.0">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <PackageReference Include="MinVer">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -33,22 +33,17 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.IO.Compression">
-      <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="System.IO.Compression.ZipFile">
-      <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="System.Memory">
-      <Version>4.6.0</Version>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
     <PackageReference Include="System.IO.Compression">
-      <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="System.IO.Compression.ZipFile">
-      <Version>4.3.0</Version>
     </PackageReference>
   </ItemGroup>
 
